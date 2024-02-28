@@ -1,0 +1,121 @@
+/* this is where all of your CSS styles go */
+html,body {
+	width: 100%;
+	height: 100%;
+	background-color: #222250;
+}
+
+.container {
+	width: 200px;
+	height: 100px;
+	position: relative;
+	left: 50%;
+	top: 48%; /* for optical centering */
+	margin-top: -50px;
+	margin-left: -100px;
+}
+
+.luna{
+	margin-left: -100px;
+	margin-top: -50px;
+}
+
+.mono {
+	font-family: "Gilroy";
+	font-size: 4em;
+	float: left;
+	margin-left: 5px;
+	letter-spacing: -5px;
+	font-weight: 600;
+	color: #ffffff;
+}
+
+@keyframes n_move {
+	0% {top: 0px; left: 0px; }
+	25% {top: -95px; left: 0px: }
+	50% {top: -95px; left: 0px;}
+	75% {top: -95px; left:95px; }
+	100% {top: 0px; left:95px; }
+}
+
+.n {
+	animation: n_move 2s;
+	animation-delay: 0.5s;
+	position: relative;
+	animation-fill-mode: forwards;
+
+}
+
+@keyframes t_move {
+	0% {top: 0px; left: 0px;}
+	25% {top: 98px; left: 0px;}
+	50% {top: 98px; left:0px;}
+	75% {top: 98px; left: -150px}
+	100% {top: 0px; left: -150px}
+}
+
+.t {
+	animation: t_move 2s ;
+	animation-delay: 0.5s;
+	position: relative;
+	animation-fill-mode: forwards;
+
+}
+
+@keyframes h_teleport {
+	0% {opacity: 1; top:0px; left: 0px;}
+	25% {opacity: 0; top:0px; left:0px;}
+	50% {opacity: 0; top:0px; left: -69px;}
+	100% {opacity: 1; top:0px; left: -69px;}
+}
+
+.h {
+	animation: h_teleport 3s;
+	animation-delay: 0.5s;
+	position: relative;
+	animation-fill-mode: forwards;
+}
+
+@keyframes g_roll {
+	0% {transform: rotate(0deg); top:0px; left: 0px;}
+	90% {transform: rotate(360deg); top:0px ; left: 80px;}
+	100% {transform: rotate(360deg); top:0px ; left: 80px;}
+}
+.g {
+	animation: g_roll 2.5s;
+	animation-delay: 0.5s;
+	position: relative;
+	animation-fill-mode: forwards;
+}
+
+@keyframes i_rotate {
+	0% {transform: rotate(0deg); top:0px; left:0px;}
+	50% { top: -70px; left: 38px; }
+	90% {transform: rotate(360deg); top:0px; left: 38px;}
+	100% {transform: rotate(360deg); top: 0px; left:38px;}
+}
+
+.i {
+	animation: i_rotate 2s linear;
+	animation-delay: 0.5s;
+	position: relative;
+	animation-fill-mode: forwards;
+}
+
+.moon {
+	scale: 50%;
+	animation-delay: 0.7s;
+	animation: moon 3s;
+	position:  relative;
+	animation-fill-mode: forwards;
+}
+
+@keyframes moon {
+	0% {opacity: 1; top:0px; left:0px;}
+	100% {opacity: 0; top: 300px; left:0px;}
+}
+
+@font-face {
+	font-family:'Gilroy';
+	src:url(../fonts/Gilroy-Regular.ttf) format('truetype');
+}
